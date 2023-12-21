@@ -1,0 +1,51 @@
+# 한줄 주석
+
+# 파일명 제외 -> 해당 파일명을 적으면 해당 파일명을 제외해라
+.classpath
+.project
+
+# 루트 폴더에서 폴더 제외
+# .gitignore 가 있는 위치로부터 내려가서 .setting 을 제외해라
+# /a/b/ -> a 폴더 아래에 있는 b 폴더를 제외해라
+
+/.settings/
+
+# a/ -> 상위에 어떤 폴더가 있는지 상관없이 a 라는 이름의 폴더를 제외해라
+build/
+
+# *-> 아무거나 상관없는
+# ** -> 아무거나 상관없는 폴더
+/**/META-INF/
+
+# 이름은 상관없이 확장자가 xml 이면 제외해라
+config/*.mxl
+
+# ? 토큰 -> 아무거나 상관없이 1글자
+# ?.txt -> 한글자 이름을 가진 텍스트 문서
+# [abcde] -> 여러 글자중 하나
+# [abcde]g -> ag, bg, cg
+#[0-9] -> 범위지정 
+
+/**/com.jsp/test/
+!/**/com.jsp/test/Provider.java
+
+/**/WEB-INF/resources/.vscode/
+/**/WEB-INF/resources/node_modules/
+/**/WEB-INF/resources/package.json
+/**/WEB-INF/resources/package-lock.json
+
+
+# local repository - 내가 실제 작업하는 공간
+# stage - 내가 작업한 이력을 저장하는 공간
+# add - 내가 작업한 이력을 더하는 작업
+# commit - 내가 작업한 이력을 실제로 허용하는 작업
+# history - 내가 작업한 이력
+# push - commit 한 이력을 web-repository 에 올리는 작업
+# web repository - 모두가 공유하는 작업 공간
+# branch - 내가 작업하는 환경을 동일하게 작업하되 다른 작업을 따로 하는 공간
+# merge - 서로 다른 branch 를 한개로 병합하는 작업
+# fetch - web repository 에 있는 stage 정보를 가져오는 작업
+# pull -  fetch + merge
+# reset - history 명령어 - 해당 위치로 이동 /
+# revert - history 명령어 - 해당 위치로 이동한 후에 새로운 branch 를 만들어라
+# pull request - 혀용한 작업자가 아닌 허용되지 않은 작업자가 작업을 가져갈 수 있다 -> fork
